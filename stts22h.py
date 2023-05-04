@@ -15,7 +15,7 @@ CircuitPython Driver for the STTS22H Temperature Sensor
 
 from micropython import const
 from adafruit_bus_device import i2c_device
-from adafruit_register.i2c_struct import ROUnaryStruct, UnaryStruct, Struct
+from adafruit_register.i2c_struct import ROUnaryStruct, UnaryStruct
 from adafruit_register.i2c_bits import RWBits
 from adafruit_register.i2c_bit import RWBit, ROBit
 
@@ -37,6 +37,7 @@ ODR_50_HZ = const(0b01)
 ODR_100_HZ = const(0b10)
 ODR_200_HZ = const(0b11)
 output_data_rate_values = (ODR_25_HZ, ODR_50_HZ, ODR_100_HZ, ODR_200_HZ)
+
 
 class STTS22H:
     """Driver for the STTS22H Sensor connected over I2C.
@@ -73,14 +74,11 @@ class STTS22H:
 
     _device_id = ROUnaryStruct(_REG_WHOAMI, "B")
 
-
-
     _temperature_high_limit = UnaryStruct(0x02, "B")
     _temperature_low_limit = UnaryStruct(0x03, "B")
 
     _freerun = RWBit(_CTRL, 2)
     _output_data_rate = RWBits(2, _CTRL, 4)
-
 
     _temperature_LSB = ROUnaryStruct(0x06, "B")
     _temperature_MSB = ROUnaryStruct(0x07, "B")
@@ -107,6 +105,9 @@ class STTS22H:
 
     @property
     def temperature_high_limit(self) -> float:
+        """
+        Temperature High Limit
+        """
         return self._temperature_high_limit
 
     @temperature_high_limit.setter
@@ -115,6 +116,9 @@ class STTS22H:
 
     @property
     def temperature_low_limit(self) -> float:
+        """
+        Temperature Low limit
+        """
         return self._temperature_low_limit
 
     @temperature_low_limit.setter
@@ -129,6 +133,7 @@ class STTS22H:
         """
         value = (False, True)
         return value[self._high_limit]
+
     @property
     def low_limit(self) -> bool:
         """
@@ -155,7 +160,12 @@ class STTS22H:
         | :py:const:`stts22h.ODR_200_HZ` | :py:const:`0b11` |
         +--------------------------------+------------------+
         """
-        values = ("ODR_25_HZ", "ODR_50_HZ", "ODR_100_HZ", "ODR_200_HZ",)
+        values = (
+            "ODR_25_HZ",
+            "ODR_50_HZ",
+            "ODR_100_HZ",
+            "ODR_200_HZ",
+        )
         return values[self._output_data_rate]
 
     @output_data_rate.setter

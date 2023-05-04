@@ -12,4 +12,3 @@ stts = stts22h.STTS22H(i2c)
 while True:
     print("Temperature: {:.2f}C".format(stts.temperature))
     time.sleep(0.5)
-
