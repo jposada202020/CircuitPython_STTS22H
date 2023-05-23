@@ -20,3 +20,9 @@ Table of Contents
     :maxdepth: 3
 
     api
+
+.. toctree::
+    :caption: Other Links
+
+    Download from GitHub <https://github.com/jposada202020/CircuitPython_STTS22H/releases/latest>
+    Download Library Bundle <https://circuitpython.org/libraries>
