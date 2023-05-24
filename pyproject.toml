@@ -15,7 +15,7 @@ description = "CircuitPython Driver for the STTS22H Temperature Sensor"
 version = "0.0.0+auto.0"
 readme = "README.rst"
 authors = [
-    {name = "Jose D. Montoya", email = "jlib@mailmeto.mozmail.com"}
+    {name = "JDM", email = "jdm@mozmail.com"}
 ]
 urls = {Homepage = "https://github.com/jposada202020/CircuitPython_STTS22H"}
 keywords = [
