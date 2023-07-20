@@ -97,7 +97,7 @@ class STTS22H:
     @property
     def temperature(self) -> float:
         """
-        The temperature sensor in C
+        The temperature sensor in Celsius
         :return: Temperature
         """
 
@@ -128,7 +128,7 @@ class STTS22H:
     @property
     def high_limit(self) -> bool:
         """
-        The bit is automatically reset to ‘0’ upon reading the STATUS register.
+        The bit is automatically reset to '0' upon reading the STATUS register.
         :return: value if the temperature exceeds the high limit
         """
         value = (False, True)
@@ -137,7 +137,7 @@ class STTS22H:
     @property
     def low_limit(self) -> bool:
         """
-        The bit is automatically reset to ‘0’ upon reading the STATUS register.
+        The bit is automatically reset to '0' upon reading the STATUS register.
         :return: value if the temperature went under the low limit
         """
         value = (False, True)

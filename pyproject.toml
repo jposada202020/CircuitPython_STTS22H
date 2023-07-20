@@ -20,12 +20,9 @@ authors = [
 urls = {Homepage = "https://github.com/jposada202020/CircuitPython_STTS22H"}
 keywords = [
     "sensor",
-    "blinka",
     "circuitpython",
-    "micropython",
     "stts22h",
     "temperature",
-    "sensor",
     "STTS22H",
     "driver",
 ]
@@ -45,4 +42,3 @@ py-modules = ["stts22h"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
-optional-dependencies = {optional = {file = ["optional_requirements.txt"]}}

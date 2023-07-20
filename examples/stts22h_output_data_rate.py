@@ -15,7 +15,7 @@ while True:
     for output_data_rate in stts22h.output_data_rate_values:
         print("Current Output data rate setting: ", stts.output_data_rate)
         for _ in range(10):
-            temp = stts.temperature
-            print("Temperature :{:.2f}CC".format(temp))
+            print(f"Temperature: {stts.temperature}°C")
+            print()
             time.sleep(0.5)
         stts.output_data_rate = output_data_rate

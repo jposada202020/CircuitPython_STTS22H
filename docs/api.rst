@@ -1,5 +1,5 @@
-STTS22H Library
-==================
+CircuitPython STTS22H Library
+===============================
 
 
 .. automodule:: stts22h

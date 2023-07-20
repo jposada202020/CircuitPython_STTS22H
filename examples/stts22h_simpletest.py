@@ -10,5 +10,6 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 stts = stts22h.STTS22H(i2c)
 
 while True:
-    print("Temperature: {:.2f}C".format(stts.temperature))
+    print(f"Temperature: {stts.temperature}°C")
+    print()
     time.sleep(0.5)
