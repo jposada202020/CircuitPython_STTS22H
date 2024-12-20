@@ -1,27 +1,13 @@
-Introduction
-============
+⛔️ DEPRECATED
+===============
 
+This repository is no longer supported, please consider using alternatives.
 
-.. image:: https://readthedocs.org/projects/circuitpython-stts22h/badge/?version=latest
-    :target: https://circuitpython-stts22h.readthedocs.io/
-    :alt: Documentation Status
+.. image:: http://unmaintained.tech/badge.svg
+  :target: http://unmaintained.tech
+  :alt: No Maintenance Intended
 
-
-.. image:: https://img.shields.io/pypi/v/circuitpython-stts22h.svg
-    :alt: latest version on PyPI
-    :target: https://pypi.python.org/pypi/circuitpython-stts22h
-
-.. image:: https://static.pepy.tech/personalized-badge/circuitpython-stts22h?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
-    :alt: Total PyPI downloads
-    :target: https://pepy.tech/project/circuitpython-stts22h
-
-.. image:: https://github.com/jposada202020/CircuitPython_STTS22H/workflows/Build%20CI/badge.svg
-    :target: https://github.com/jposada202020/CircuitPython_STTS22H/actions
-    :alt: Build Status
-
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-    :target: https://github.com/psf/black
-    :alt: Code Style: Black
+MicroPython Driver for the DS3502 Potentiometer
 
 CircuitPython Driver for the STTS22H Temperature Sensor
 
